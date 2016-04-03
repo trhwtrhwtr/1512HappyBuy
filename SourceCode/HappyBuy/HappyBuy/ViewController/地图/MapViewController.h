@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BusinessViewModel.h"
 
 @interface MapViewController : UIViewController
 
 @property (nonatomic) NSString *category;
-
+@property (nonatomic) BusinessViewModel *businessVM;
 @end

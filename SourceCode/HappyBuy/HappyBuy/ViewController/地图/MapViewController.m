@@ -11,6 +11,23 @@
 #import "WebViewController.h"
 @import MapKit;
 
+
+@interface TRAnnotation : NSObject<MKAnnotation>
+@property (nonatomic) BusinessBusinessesModel *businessModel;
+- (void)changeTitle:(NSString *)title;
+@end
+@implementation TRAnnotation
+@synthesize coordinate = _coordinate;
+@synthesize title = _title;
+- (void)changeTitle:(NSString *)title{
+    _title = title;
+}
+
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate{
+    _coordinate = newCoordinate;
+}
+@end
+
 @interface MapViewController ()<MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic) MapViewModel *mapVM;
@@ -37,6 +54,14 @@
         //        annotationView.animatesDrop = YES;
         annotationView.canShowCallout = YES;
         annotationView.image = [UIImage imageNamed:@"ic_category_default"];
+        UITapGestureRecognizer *tapGR = [UITapGestureRecognizer bk_recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+            MKAnnotationView *annotationV = (MKAnnotationView *)sender.view;
+            if(annotationV.selected){ //弹出气泡时
+                WebViewController *webVC = [[WebViewController alloc] initWithURL:[NSURL URLWithString:[[(TRAnnotation *)annotationV.annotation businessModel] businessURL]]];
+                [self.navigationController pushViewController:webVC animated:YES];
+            }
+        }];
+        [annotationView addGestureRecognizer:tapGR];
     }
     annotationView.annotation = annotation;
     
@@ -50,7 +75,7 @@
     }
 }
 
-
+#pragma mark - 方法
 - (void)showBussinessedInMapView{
     [self.mapVM cancelTask]; //取消之前进行的网络操作
     [self.mapVM getBusinessWithCategory:self.category region:self.mapView.region completionHandler:^(NSError *error) {
@@ -61,12 +86,13 @@
                 //                NSMutableArray *annotions = [NSMutableArray new];
                 NSMutableArray *annotions = @[].mutableCopy;
                 for (BusinessBusinessesModel *model in self.mapVM.dataList) {
-                    MKPointAnnotation *pointA = [MKPointAnnotation new];
+                    TRAnnotation *pointA = [TRAnnotation new];
                     [pointA setCoordinate:CLLocationCoordinate2DMake(model.latitude, model.longitude)];
-                    pointA.title = model.name;
+                    [pointA changeTitle:model.name];
                     //                    if (![self.dataSet containsObject:pointA]) {
                     //                        [annotions addObject:pointA];
                     //                    }
+                    pointA.businessModel = model;
                     [self.dataSet containsObject:pointA] ?: [annotions addObject:pointA];
                     [self.dataSet addObject:pointA];
                 }

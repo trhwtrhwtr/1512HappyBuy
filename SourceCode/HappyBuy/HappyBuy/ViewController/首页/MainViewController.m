@@ -195,6 +195,7 @@
     if ([segue.identifier isEqualToString:@"MapViewController"]) {
         MapViewController *mapVC = segue.destinationViewController;
         mapVC.category = self.category;
+        mapVC.businessVM = self.businessVM;
     }
 }
 
