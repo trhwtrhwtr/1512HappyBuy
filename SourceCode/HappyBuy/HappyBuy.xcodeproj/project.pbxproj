@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		381DEAE91CB11EF100EE2BD3 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DEAE81CB11EF100EE2BD3 /* Factory.m */; };
+		381DEAED1CB12C0A00EE2BD3 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DEAEC1CB12C0A00EE2BD3 /* MineViewController.m */; };
 		383A01F61CAA69F200AE668D /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F51CAA69F200AE668D /* BusinessModel.m */; };
 		383A01F91CAA6F7000AE668D /* DealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F81CAA6F7000AE668D /* DealModel.m */; };
 		383A01FC1CAA745500AE668D /* SlotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01FB1CAA745500AE668D /* SlotModel.m */; };
+		383A03A21CB12DEE0083BE30 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A03A11CB12DEE0083BE30 /* LoginViewController.m */; };
 		38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086B1CB0CD5F0029918D /* MapViewController.m */; };
 		38BF086F1CB0E4E90029918D /* MapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086E1CB0E4E90029918D /* MapViewModel.m */; };
 		38BF08721CB0E5DA0029918D /* NSObject+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF08711CB0E5DA0029918D /* NSObject+ViewModel.m */; };
@@ -66,12 +68,16 @@
 /* Begin PBXFileReference section */
 		381DEAE71CB11EF100EE2BD3 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
 		381DEAE81CB11EF100EE2BD3 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
+		381DEAEB1CB12C0A00EE2BD3 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		381DEAEC1CB12C0A00EE2BD3 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		383A01F41CAA69F200AE668D /* BusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessModel.h; sourceTree = "<group>"; };
 		383A01F51CAA69F200AE668D /* BusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessModel.m; sourceTree = "<group>"; };
 		383A01F71CAA6F7000AE668D /* DealModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealModel.h; sourceTree = "<group>"; };
 		383A01F81CAA6F7000AE668D /* DealModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealModel.m; sourceTree = "<group>"; };
 		383A01FA1CAA745500AE668D /* SlotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlotModel.h; sourceTree = "<group>"; };
 		383A01FB1CAA745500AE668D /* SlotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlotModel.m; sourceTree = "<group>"; };
+		383A03A01CB12DEE0083BE30 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		383A03A11CB12DEE0083BE30 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		38BF086A1CB0CD5F0029918D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = "HappyBuy/ViewController/地图/MapViewController.h"; sourceTree = SOURCE_ROOT; };
 		38BF086B1CB0CD5F0029918D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = "HappyBuy/ViewController/地图/MapViewController.m"; sourceTree = SOURCE_ROOT; };
 		38BF086D1CB0E4E90029918D /* MapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewModel.h; sourceTree = "<group>"; };
@@ -184,6 +190,25 @@
 				381DEAE81CB11EF100EE2BD3 /* Factory.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		381DEAEA1CB12BFB00EE2BD3 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				383A039F1CB12DE50083BE30 /* 登录 */,
+				381DEAEB1CB12C0A00EE2BD3 /* MineViewController.h */,
+				381DEAEC1CB12C0A00EE2BD3 /* MineViewController.m */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		383A039F1CB12DE50083BE30 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				383A03A01CB12DEE0083BE30 /* LoginViewController.h */,
+				383A03A11CB12DEE0083BE30 /* LoginViewController.m */,
+			);
+			path = "登录";
 			sourceTree = "<group>";
 		};
 		38CAA2601CA849EC005449F2 = {
@@ -340,6 +365,7 @@
 		850E89161CA8CCFD0081C3FC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				381DEAEA1CB12BFB00EE2BD3 /* 我的 */,
 				854FCAB21CACCF7F00220970 /* 商家 */,
 				854FCAB31CACCF7F00220970 /* 首页 */,
 				854FCAB61CACCF7F00220970 /* 我的 */,
@@ -605,6 +631,7 @@
 				85989FAE1CAE588B00C2D0AF /* BusinessViewModel.m in Sources */,
 				8591B2281CA90A7400B99A56 /* UIView+HUD.m in Sources */,
 				8591B5201CAB61E300CC3A6A /* CategoriesModel.m in Sources */,
+				381DEAED1CB12C0A00EE2BD3 /* MineViewController.m in Sources */,
 				38EC22C41CAB7C470041E2CE /* CityDataModel.m in Sources */,
 				38EC22BE1CAB7B880041E2CE /* CityModel.m in Sources */,
 				38EC22DC1CAB82B60041E2CE /* SortsModel.m in Sources */,
@@ -613,6 +640,7 @@
 				38BF086F1CB0E4E90029918D /* MapViewModel.m in Sources */,
 				85989FA51CAE23F600C2D0AF /* AppDelegate+Location.m in Sources */,
 				38EC22D91CAB80F30041E2CE /* PortalSettingsModel.m in Sources */,
+				383A03A21CB12DEE0083BE30 /* LoginViewController.m in Sources */,
 				38EC22BB1CAB78650041E2CE /* CitiesModel.m in Sources */,
 				85989FAB1CAE526800C2D0AF /* BusinessCell.m in Sources */,
 				854FCAB91CACCFBD00220970 /* MainViewController.m in Sources */,
