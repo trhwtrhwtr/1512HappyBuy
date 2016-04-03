@@ -38,6 +38,16 @@
 
 #import <YYKit.h>
 
+
+#import <CocoaLumberjack.h> //优秀的替换NSLog的第三方，更加省资源，并且可以定义打印级别
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelVerbose;
+#else
+static const int ddLogLevel = DDLogLevelError;
+#endif
+
+#import "Factory.h"
+
 #endif /* PrefixHeader_pch */
 
 

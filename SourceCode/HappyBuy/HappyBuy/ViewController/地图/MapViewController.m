@@ -34,11 +34,13 @@
 
 @property (nonatomic) BOOL alreadyShowUserLocation;
 @property (nonatomic) NSMutableSet *dataSet;
+@property (nonatomic) MKUserLocation* userLocation;
 @end
 
 @implementation MapViewController
 
 #pragma mark - 代理 MapView
+/** 当地图显示区域发生变化时触发 */
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
     [self showBussinessedInMapView];
 }
@@ -64,14 +66,13 @@
         [annotationView addGestureRecognizer:tapGR];
     }
     annotationView.annotation = annotation;
-    
     return annotationView;
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+    self.userLocation = userLocation;
     if (!self.alreadyShowUserLocation) {
-        self.alreadyShowUserLocation = YES;
-        [mapView setRegion:MKCoordinateRegionMake(userLocation.location.coordinate, MKCoordinateSpanMake(0.1, 0.1)) animated:YES];
+        [self relocation:nil];
     }
 }
 
@@ -104,6 +105,10 @@
         }
     }];
 }
+- (IBAction)relocation:(id)sender {
+    self.alreadyShowUserLocation = YES;
+    [self.mapView setRegion:MKCoordinateRegionMake(self.userLocation.location.coordinate, MKCoordinateSpanMake(0.1, 0.1)) animated:YES];
+}
 
 #pragma mark - 生命周期
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
@@ -117,6 +122,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [Factory addBackItemToVC:self];
+    
 }
 
 - (void)didReceiveMemoryWarning {

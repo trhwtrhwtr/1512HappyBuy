@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381DEAE91CB11EF100EE2BD3 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DEAE81CB11EF100EE2BD3 /* Factory.m */; };
 		383A01F61CAA69F200AE668D /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F51CAA69F200AE668D /* BusinessModel.m */; };
 		383A01F91CAA6F7000AE668D /* DealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F81CAA6F7000AE668D /* DealModel.m */; };
 		383A01FC1CAA745500AE668D /* SlotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01FB1CAA745500AE668D /* SlotModel.m */; };
@@ -63,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		381DEAE71CB11EF100EE2BD3 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
+		381DEAE81CB11EF100EE2BD3 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
 		383A01F41CAA69F200AE668D /* BusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessModel.h; sourceTree = "<group>"; };
 		383A01F51CAA69F200AE668D /* BusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessModel.m; sourceTree = "<group>"; };
 		383A01F71CAA6F7000AE668D /* DealModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealModel.h; sourceTree = "<group>"; };
@@ -174,6 +177,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381DEAE61CB11EF100EE2BD3 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				381DEAE71CB11EF100EE2BD3 /* Factory.h */,
+				381DEAE81CB11EF100EE2BD3 /* Factory.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		38CAA2601CA849EC005449F2 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +209,7 @@
 			children = (
 				38CAA26F1CA849EC005449F2 /* AppDelegate.h */,
 				38CAA2701CA849EC005449F2 /* AppDelegate.m */,
+				381DEAE61CB11EF100EE2BD3 /* Tool */,
 				850E890F1CA8CCFD0081C3FC /* Category */,
 				850E89101CA8CCFD0081C3FC /* Define */,
 				850E89111CA8CCFD0081C3FC /* Model */,
@@ -605,6 +618,7 @@
 				854FCAB91CACCFBD00220970 /* MainViewController.m in Sources */,
 				854FCAE81CAD1A9700220970 /* CityListViewModel.m in Sources */,
 				85989FB11CAE70D900C2D0AF /* WebViewController.m in Sources */,
+				381DEAE91CB11EF100EE2BD3 /* Factory.m in Sources */,
 				850E891A1CA8CCFD0081C3FC /* ViewController.m in Sources */,
 				38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */,
 				38EC22D31CAB7F750041E2CE /* MineInformationDataModel.m in Sources */,

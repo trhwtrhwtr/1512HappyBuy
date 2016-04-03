@@ -306,12 +306,26 @@
                                     <outlet property="delegate" destination="4bz-fe-H4e" id="3V4-30-N9j"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sop-aw-nAe">
+                                <rect key="frame" x="5" y="444" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="8r2-is-mO6"/>
+                                    <constraint firstAttribute="height" constant="40" id="GFj-8a-O4S"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="icon_map_location"/>
+                                <state key="highlighted" backgroundImage="icon_map_location_highlighted"/>
+                                <connections>
+                                    <action selector="relocation:" destination="4bz-fe-H4e" eventType="touchUpInside" id="GYP-5Q-4Lp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OuX-9k-RlP" firstAttribute="leading" secondItem="9Ha-6Y-DcL" secondAttribute="leading" id="Hoc-is-g5F"/>
                             <constraint firstItem="kLB-W6-l2P" firstAttribute="top" secondItem="OuX-9k-RlP" secondAttribute="bottom" id="Ttd-r4-nfr"/>
+                            <constraint firstItem="kLB-W6-l2P" firstAttribute="top" secondItem="Sop-aw-nAe" secondAttribute="bottom" constant="20" id="VJh-9F-1aB"/>
                             <constraint firstAttribute="trailing" secondItem="OuX-9k-RlP" secondAttribute="trailing" id="ldA-dQ-qxW"/>
+                            <constraint firstItem="Sop-aw-nAe" firstAttribute="leading" secondItem="9Ha-6Y-DcL" secondAttribute="leading" constant="5" id="qVr-cI-fUk"/>
                             <constraint firstItem="OuX-9k-RlP" firstAttribute="top" secondItem="qwb-Od-Nw6" secondAttribute="bottom" id="qpi-wa-Pkc"/>
                         </constraints>
                     </view>
@@ -422,6 +436,8 @@
     </scenes>
     <resources>
         <image name="icon_homepage_CouponCategory" width="80" height="80"/>
+        <image name="icon_map_location" width="70" height="70"/>
+        <image name="icon_map_location_highlighted" width="70" height="70"/>
         <image name="位置" width="18" height="22"/>
         <image name="我" width="19" height="20"/>
         <image name="我1" width="19" height="20"/>

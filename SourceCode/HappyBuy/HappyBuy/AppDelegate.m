@@ -17,22 +17,10 @@
 @implementation AppDelegate
 #pragma mark - UIApplication Delegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [self configGlobalUI];
     //调用分类中的定位相关方法
     [self setupLocation];
-    
+    [self setupGlobalConfig];
     return YES;
-}
-//对UI进行统一的配置
-- (void)configGlobalUI{
-    self.window.tintColor = kRGBColor(227, 59, 65, 1.0);
-    //[UIColor colorWithRed:227/255.0 green:59/255.0 blue:65/255.0 alpha:1.0];
-    //233 82 84
-    [[UINavigationBar appearance] setBarTintColor:kRGBColor(233, 82, 84, 1.0)];
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
-    [UIBarButtonItem appearance].tintColor = [UIColor whiteColor];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:20]}];
 }
 
 @end

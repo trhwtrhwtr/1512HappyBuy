@@ -21,6 +21,11 @@
 @end
 @implementation BusinessBusinessesModel
 
+/** 判断两个类型是否相等, 被containsObject:方法触发. 变对比指针为对比元素 */
+- (BOOL)isEqual:(id)object {
+    return [self modelIsEqual:object];
+}
+
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"branchName": @"branch_name",
              @"ratingSImgURL": @"rating_s_img_url",

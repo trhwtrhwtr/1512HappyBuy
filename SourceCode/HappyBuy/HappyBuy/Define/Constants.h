@@ -30,6 +30,12 @@ __weak __typeof(&*self)weakSelf = self;
 /** 当前城市变化的通知 */
 #define kCurrentCityChangedNotification @"kCurrentCityChangedNotification"
 
+//Documents文件夹的路径
+#define kDocPath NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
+//appdelegate的实例对象
+#import "AppDelegate.h"
+#define kAppdelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
 #endif /* Constants_h */
 
 
