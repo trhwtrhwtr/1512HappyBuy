@@ -11,6 +11,7 @@
 #import "BusinessCell.h"
 #import "BusinessViewModel.h"
 #import "WebViewController.h"
+#import "MapViewController.h"
 
 #define kItemIconTag   100
 #define kItemLabelTag   200
@@ -57,11 +58,11 @@
     /*
      设 边距 = x, 间隔 = y, 屏幕宽=width
      解: y = 2x;
-        2x + 3y + 4*60 = width;
+     2x + 3y + 4*60 = width;
      求:y?
-        y + 3y = width - 4*60;
-        4y = width - 4*60;
-        y = (width - 4*60)/4;
+     y + 3y = width - 4*60;
+     4y = width - 4*60;
+     y = (width - 4*60)/4;
      */
     return (kScreenW - 4*60)/4;
 }
@@ -139,25 +140,25 @@
         _pageC.numberOfPages = _mainVM.rowNumber/8 + (_mainVM.rowNumber%8 > 0);
         [_collectionView reloadData];
     }];
-//监听城市的变化
-/*
- 监听添加的原则: 一定要有加有删
- 对立的生命周期:
- viewWillAppear -> viewWillDisappear
- viewDidAppear -> viewDidDisappear
- viewDidLoad -> viewDidUnload(抛弃)->改为dealloc
- */
+    //监听城市的变化
+    /*
+     监听添加的原则: 一定要有加有删
+     对立的生命周期:
+     viewWillAppear -> viewWillDisappear
+     viewDidAppear -> viewDidDisappear
+     viewDidLoad -> viewDidUnload(抛弃)->改为dealloc
+     */
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityChanged:) name:kCurrentCityChangedNotification object:nil];
     
     [self.tableView addHeaderRefresh:^{
-       [self.businessVM getBusinessWithCategory:self.category requestMode:RequestModeRefresh completionHandler:^(NSError *error) {
-           if (error) {
-               [self.view showWarning:error.localizedDescription];
-           }else{
-               [self.tableView reloadData];
-           }
-           [self.tableView endHeaderRefresh];
-       }];
+        [self.businessVM getBusinessWithCategory:self.category requestMode:RequestModeRefresh completionHandler:^(NSError *error) {
+            if (error) {
+                [self.view showWarning:error.localizedDescription];
+            }else{
+                [self.tableView reloadData];
+            }
+            [self.tableView endHeaderRefresh];
+        }];
     }];
     [self.tableView beginHeaderRefresh];
     
@@ -184,14 +185,18 @@
     self.cityBarItem.title = kCurrentCity;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"MapViewController"]) {
+        MapViewController *mapVC = segue.destinationViewController;
+        mapVC.category = self.category;
+    }
 }
-*/
+
 
 @end

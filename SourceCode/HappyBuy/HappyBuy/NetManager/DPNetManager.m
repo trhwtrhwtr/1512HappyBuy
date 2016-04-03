@@ -22,8 +22,17 @@
     }];
 }
 
-
-
++ (id)getBusinessesWithCategory:(NSString *)category region:(MKCoordinateRegion)region completionHandler:(void (^)(BusinessModel *model, NSError *))completionHandler{
+    NSDictionary *pa = @{@"latitude": @(region.center.latitude),
+                         @"platform": @2,
+                         @"longitude": @(region.center.longitude),
+                         @"category": category,
+                         @"radius": @(5000)};
+    NSString *path = [DPRequest serializeURL:@"http://api.dianping.com/v1/business/find_businesses" params:pa];
+    return [self GET:path parameters:nil progress:nil completionHandler:^(id responseObj, NSError *error) {
+        completionHandler([BusinessModel parseJSON:responseObj], error);
+    }];
+}
 
 
 

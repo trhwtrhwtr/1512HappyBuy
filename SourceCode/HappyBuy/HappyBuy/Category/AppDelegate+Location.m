@@ -61,7 +61,8 @@
             NSString *localCity = placemark.locality;
             localCity = [localCity stringByReplacingOccurrencesOfString:@"市" withString:@""];
             NSLog(@"%@", localCity);
-            if (![kCurrentCity isEqualToString:localCity]) {
+            //排除掉非联网状态时, 无法反地理编码得到城市名称问题.
+            if (![kCurrentCity isEqualToString:localCity] && localCity!= nil) {
                 //BlocksKit第三方的优化
                 NSString *message = [NSString stringWithFormat:@"当前城市发生变化,是否要切换到'%@'?", localCity];
                 [UIAlertView bk_showAlertViewWithTitle:@"切换城市" message:message cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {

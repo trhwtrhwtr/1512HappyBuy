@@ -9,11 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "DPNetManager.h"
 
-typedef NS_ENUM(NSUInteger, RequestMode) {
-    RequestModeRefresh, //刷新数据
-    RequestModeMore, //获取更多数据
-};
-
 @interface BusinessViewModel : NSObject
 /** 根据UI来确定属性和方法 */
 @property (nonatomic) NSInteger rowNumber;

@@ -10,6 +10,7 @@
 #import "DPRequest.h"
 #import "BusinessModel.h"
 #import "DealModel.h"
+@import MapKit;
 
 @interface DPNetManager : NSObject
 /**
@@ -18,6 +19,15 @@
  */
 + (void)getBusinessesWithCategory:(NSString *)category page:(NSInteger)page completionHandler:(void(^)(BusinessModel *model, NSError *error))completionHandler;
 
+
+/**
+ *  获取一定范围内的商家
+ *
+ *  @param category          类别
+ *  @param region            经纬度+范围
+ *  @param completionHandler 
+ */
++ (id)getBusinessesWithCategory:(NSString *)category region:(MKCoordinateRegion)region completionHandler:(void (^)(BusinessModel *model, NSError *error))completionHandler;
 @end
 
 

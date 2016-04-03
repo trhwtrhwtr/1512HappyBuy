@@ -10,6 +10,10 @@
 		383A01F61CAA69F200AE668D /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F51CAA69F200AE668D /* BusinessModel.m */; };
 		383A01F91CAA6F7000AE668D /* DealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F81CAA6F7000AE668D /* DealModel.m */; };
 		383A01FC1CAA745500AE668D /* SlotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01FB1CAA745500AE668D /* SlotModel.m */; };
+		38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086B1CB0CD5F0029918D /* MapViewController.m */; };
+		38BF086F1CB0E4E90029918D /* MapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086E1CB0E4E90029918D /* MapViewModel.m */; };
+		38BF08721CB0E5DA0029918D /* NSObject+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF08711CB0E5DA0029918D /* NSObject+ViewModel.m */; };
+		38BF08741CB0E98D0029918D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BF08731CB0E98D0029918D /* MapKit.framework */; };
 		38CAA26E1CA849EC005449F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CAA26D1CA849EC005449F2 /* main.m */; };
 		38CAA2711CA849EC005449F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CAA2701CA849EC005449F2 /* AppDelegate.m */; };
 		38CAA2771CA849EC005449F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CAA2751CA849EC005449F2 /* Main.storyboard */; };
@@ -65,6 +69,13 @@
 		383A01F81CAA6F7000AE668D /* DealModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealModel.m; sourceTree = "<group>"; };
 		383A01FA1CAA745500AE668D /* SlotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlotModel.h; sourceTree = "<group>"; };
 		383A01FB1CAA745500AE668D /* SlotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlotModel.m; sourceTree = "<group>"; };
+		38BF086A1CB0CD5F0029918D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = "HappyBuy/ViewController/地图/MapViewController.h"; sourceTree = SOURCE_ROOT; };
+		38BF086B1CB0CD5F0029918D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = "HappyBuy/ViewController/地图/MapViewController.m"; sourceTree = SOURCE_ROOT; };
+		38BF086D1CB0E4E90029918D /* MapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewModel.h; sourceTree = "<group>"; };
+		38BF086E1CB0E4E90029918D /* MapViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewModel.m; sourceTree = "<group>"; };
+		38BF08701CB0E5DA0029918D /* NSObject+ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewModel.h"; sourceTree = "<group>"; };
+		38BF08711CB0E5DA0029918D /* NSObject+ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewModel.m"; sourceTree = "<group>"; };
+		38BF08731CB0E98D0029918D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		38CAA2691CA849EC005449F2 /* HappyBuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyBuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CAA26D1CA849EC005449F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38CAA26F1CA849EC005449F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -155,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BF08741CB0E98D0029918D /* MapKit.framework in Frameworks */,
 				BB6D28C78C439577287ABD04 /* libPods-HappyBuy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +224,8 @@
 		850E890F1CA8CCFD0081C3FC /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				38BF08701CB0E5DA0029918D /* NSObject+ViewModel.h */,
+				38BF08711CB0E5DA0029918D /* NSObject+ViewModel.m */,
 				8591B2261CA90A7400B99A56 /* UIView+HUD.h */,
 				8591B2271CA90A7400B99A56 /* UIView+HUD.m */,
 				850A61491CA9263C00776131 /* UIScrollView+Refresh.h */,
@@ -331,6 +345,8 @@
 				854FCAE71CAD1A9700220970 /* CityListViewModel.m */,
 				85989FAC1CAE588B00C2D0AF /* BusinessViewModel.h */,
 				85989FAD1CAE588B00C2D0AF /* BusinessViewModel.m */,
+				38BF086D1CB0E4E90029918D /* MapViewModel.h */,
+				38BF086E1CB0E4E90029918D /* MapViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -358,6 +374,8 @@
 		854FCAB41CACCF7F00220970 /* 地图 */ = {
 			isa = PBXGroup;
 			children = (
+				38BF086A1CB0CD5F0029918D /* MapViewController.h */,
+				38BF086B1CB0CD5F0029918D /* MapViewController.m */,
 			);
 			path = "地图";
 			sourceTree = "<group>";
@@ -420,6 +438,7 @@
 		E734C4F8817747CFFB140B30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				38BF08731CB0E98D0029918D /* MapKit.framework */,
 				632DF49A4A35F19733539AC3 /* libPods-HappyBuy.a */,
 			);
 			name = Frameworks;
@@ -567,6 +586,7 @@
 				383A01F91CAA6F7000AE668D /* DealModel.m in Sources */,
 				8591B5061CAB603E00CC3A6A /* DPRequest.m in Sources */,
 				854FCAE51CAD187A00220970 /* CityListViewController.m in Sources */,
+				38BF08721CB0E5DA0029918D /* NSObject+ViewModel.m in Sources */,
 				8521C38A1CAA16C7009E9F18 /* NSObject+Netwoking.m in Sources */,
 				38EC22CA1CAB7E4E0041E2CE /* CityGroupsModel.m in Sources */,
 				85989FAE1CAE588B00C2D0AF /* BusinessViewModel.m in Sources */,
@@ -577,6 +597,7 @@
 				38EC22DC1CAB82B60041E2CE /* SortsModel.m in Sources */,
 				38CAA2711CA849EC005449F2 /* AppDelegate.m in Sources */,
 				8521C38D1CAA22B7009E9F18 /* AppDelegate+System.m in Sources */,
+				38BF086F1CB0E4E90029918D /* MapViewModel.m in Sources */,
 				85989FA51CAE23F600C2D0AF /* AppDelegate+Location.m in Sources */,
 				38EC22D91CAB80F30041E2CE /* PortalSettingsModel.m in Sources */,
 				38EC22BB1CAB78650041E2CE /* CitiesModel.m in Sources */,
@@ -585,6 +606,7 @@
 				854FCAE81CAD1A9700220970 /* CityListViewModel.m in Sources */,
 				85989FB11CAE70D900C2D0AF /* WebViewController.m in Sources */,
 				850E891A1CA8CCFD0081C3FC /* ViewController.m in Sources */,
+				38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */,
 				38EC22D31CAB7F750041E2CE /* MineInformationDataModel.m in Sources */,
 				38CAA26E1CA849EC005449F2 /* main.m in Sources */,
 				8591B5231CAB6DBC00CC3A6A /* NSObject+Parse.m in Sources */,
@@ -711,7 +733,7 @@
 				INFOPLIST_FILE = HappyBuy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tedu.HappyBuy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tedu.HappyBuy7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -727,7 +749,7 @@
 				INFOPLIST_FILE = HappyBuy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tedu.HappyBuy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tedu.HappyBuy7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
