@@ -28,6 +28,18 @@
  *  @param completionHandler 
  */
 + (id)getBusinessesWithCategory:(NSString *)category region:(MKCoordinateRegion)region completionHandler:(void (^)(BusinessModel *model, NSError *error))completionHandler;
+
+/**
+ *  获取团购列表
+ *
+ *  @param sort              排序方式
+ *  @param region            区域
+ *  @param category          分类
+ *  @param completionHandler
+ *
+ *  @return <#return value description#>
+ */
++ (id)getDealsWithSort:(NSInteger)sort region:(NSString *)region category:(NSString *)category page:(NSInteger)page completionHandler:(void(^)(DealModel *model, NSError *error))completionHandler;
 @end
 
 

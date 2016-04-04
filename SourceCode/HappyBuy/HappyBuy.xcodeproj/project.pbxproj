@@ -12,6 +12,8 @@
 		381DEAED1CB12C0A00EE2BD3 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DEAEC1CB12C0A00EE2BD3 /* MineViewController.m */; };
 		382001151CB2863000A94436 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382001141CB2863000A94436 /* SearchViewController.m */; };
 		382001171CB286D400A94436 /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382001161CB286D400A94436 /* BusinessCell.xib */; };
+		3820011B1CB2894E00A94436 /* SortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3820011A1CB2894E00A94436 /* SortView.m */; };
+		382001201CB2AA0300A94436 /* DealViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3820011F1CB2AA0300A94436 /* DealViewModel.m */; };
 		383A01F61CAA69F200AE668D /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F51CAA69F200AE668D /* BusinessModel.m */; };
 		383A01F91CAA6F7000AE668D /* DealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F81CAA6F7000AE668D /* DealModel.m */; };
 		383A01FC1CAA745500AE668D /* SlotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01FB1CAA745500AE668D /* SlotModel.m */; };
@@ -78,6 +80,10 @@
 		382001131CB2863000A94436 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		382001141CB2863000A94436 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		382001161CB286D400A94436 /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
+		382001191CB2894E00A94436 /* SortView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortView.h; sourceTree = "<group>"; };
+		3820011A1CB2894E00A94436 /* SortView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortView.m; sourceTree = "<group>"; };
+		3820011E1CB2AA0300A94436 /* DealViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealViewModel.h; sourceTree = "<group>"; };
+		3820011F1CB2AA0300A94436 /* DealViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealViewModel.m; sourceTree = "<group>"; };
 		383A01F41CAA69F200AE668D /* BusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessModel.h; sourceTree = "<group>"; };
 		383A01F51CAA69F200AE668D /* BusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessModel.m; sourceTree = "<group>"; };
 		383A01F71CAA6F7000AE668D /* DealModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealModel.h; sourceTree = "<group>"; };
@@ -217,6 +223,15 @@
 				382001141CB2863000A94436 /* SearchViewController.m */,
 			);
 			path = "搜索";
+			sourceTree = "<group>";
+		};
+		382001181CB2890E00A94436 /* 排序控件 */ = {
+			isa = PBXGroup;
+			children = (
+				382001191CB2894E00A94436 /* SortView.h */,
+				3820011A1CB2894E00A94436 /* SortView.m */,
+			);
+			path = "排序控件";
 			sourceTree = "<group>";
 		};
 		383A039F1CB12DE50083BE30 /* 登录 */ = {
@@ -373,6 +388,7 @@
 		850E89151CA8CCFD0081C3FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				382001181CB2890E00A94436 /* 排序控件 */,
 				85989FA91CAE526800C2D0AF /* BusinessCell.h */,
 				85989FAA1CAE526800C2D0AF /* BusinessCell.m */,
 				382001161CB286D400A94436 /* BusinessCell.xib */,
@@ -404,6 +420,8 @@
 				85989FAD1CAE588B00C2D0AF /* BusinessViewModel.m */,
 				38BF086D1CB0E4E90029918D /* MapViewModel.h */,
 				38BF086E1CB0E4E90029918D /* MapViewModel.m */,
+				3820011E1CB2AA0300A94436 /* DealViewModel.h */,
+				3820011F1CB2AA0300A94436 /* DealViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -638,6 +656,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382001201CB2AA0300A94436 /* DealViewModel.m in Sources */,
+				3820011B1CB2894E00A94436 /* SortView.m in Sources */,
 				854FCABC1CACF94000220970 /* MainViewModel.m in Sources */,
 				85989FA81CAE472C00C2D0AF /* DPNetManager.m in Sources */,
 				8591B5051CAB603E00CC3A6A /* DPAPI.m in Sources */,

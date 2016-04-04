@@ -34,6 +34,18 @@
     }];
 }
 
++ (id)getDealsWithSort:(NSInteger)sort region:(NSString *)region category:(NSString *)category page:(NSInteger)page completionHandler:(void (^)(DealModel *, NSError *))completionHandler{
+    NSDictionary *pa = @{@"sort": @(sort),
+                         @"platform": @2,
+                         @"category": category,
+                         @"page": @(page),
+                         @"city": kCurrentCity ?: @"北京",
+                         @"region": region};
+    NSString *path = [DPRequest serializeURL:@"http://api.dianping.com/v1/deal/find_deals" params:pa];
+    return [self GET:path parameters:nil progress:nil completionHandler:^(id responseObj, NSError *error) {
+        completionHandler([BusinessModel parseJSON:responseObj], error);
+    }];
+}
 
 
 

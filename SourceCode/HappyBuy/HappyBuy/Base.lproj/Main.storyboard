@@ -150,7 +150,7 @@
                             <rect key="frame" x="23" y="5.5" width="274" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="syf-cq-tRj">
+                                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="请输入商家、品类、商圈" translatesAutoresizingMaskIntoConstraints="NO" id="syf-cq-tRj">
                                     <rect key="frame" x="0.0" y="0.0" width="274" height="33"/>
                                     <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                     <textInputTraits key="textInputTraits"/>
