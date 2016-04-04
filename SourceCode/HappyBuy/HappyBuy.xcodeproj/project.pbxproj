@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3815AE631CB2726B0083583F /* DealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3815AE621CB2726B0083583F /* DealViewController.m */; };
 		381DEAE91CB11EF100EE2BD3 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DEAE81CB11EF100EE2BD3 /* Factory.m */; };
 		381DEAED1CB12C0A00EE2BD3 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DEAEC1CB12C0A00EE2BD3 /* MineViewController.m */; };
+		382001151CB2863000A94436 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382001141CB2863000A94436 /* SearchViewController.m */; };
+		382001171CB286D400A94436 /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382001161CB286D400A94436 /* BusinessCell.xib */; };
 		383A01F61CAA69F200AE668D /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F51CAA69F200AE668D /* BusinessModel.m */; };
 		383A01F91CAA6F7000AE668D /* DealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F81CAA6F7000AE668D /* DealModel.m */; };
 		383A01FC1CAA745500AE668D /* SlotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01FB1CAA745500AE668D /* SlotModel.m */; };
@@ -66,10 +69,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3815AE611CB2726B0083583F /* DealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealViewController.h; sourceTree = "<group>"; };
+		3815AE621CB2726B0083583F /* DealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealViewController.m; sourceTree = "<group>"; };
 		381DEAE71CB11EF100EE2BD3 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
 		381DEAE81CB11EF100EE2BD3 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
 		381DEAEB1CB12C0A00EE2BD3 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		381DEAEC1CB12C0A00EE2BD3 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		382001131CB2863000A94436 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		382001141CB2863000A94436 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		382001161CB286D400A94436 /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
 		383A01F41CAA69F200AE668D /* BusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessModel.h; sourceTree = "<group>"; };
 		383A01F51CAA69F200AE668D /* BusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessModel.m; sourceTree = "<group>"; };
 		383A01F71CAA6F7000AE668D /* DealModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealModel.h; sourceTree = "<group>"; };
@@ -200,6 +208,15 @@
 				381DEAEC1CB12C0A00EE2BD3 /* MineViewController.m */,
 			);
 			path = "我的";
+			sourceTree = "<group>";
+		};
+		382001121CB2862A00A94436 /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				382001131CB2863000A94436 /* SearchViewController.h */,
+				382001141CB2863000A94436 /* SearchViewController.m */,
+			);
+			path = "搜索";
 			sourceTree = "<group>";
 		};
 		383A039F1CB12DE50083BE30 /* 登录 */ = {
@@ -358,6 +375,7 @@
 			children = (
 				85989FA91CAE526800C2D0AF /* BusinessCell.h */,
 				85989FAA1CAE526800C2D0AF /* BusinessCell.m */,
+				382001161CB286D400A94436 /* BusinessCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -393,6 +411,9 @@
 		854FCAB21CACCF7F00220970 /* 商家 */ = {
 			isa = PBXGroup;
 			children = (
+				382001121CB2862A00A94436 /* 搜索 */,
+				3815AE611CB2726B0083583F /* DealViewController.h */,
+				3815AE621CB2726B0083583F /* DealViewController.m */,
 			);
 			path = "商家";
 			sourceTree = "<group>";
@@ -549,6 +570,7 @@
 				8591B51D1CAB609300CC3A6A /* sorts.plist in Resources */,
 				38CAA2791CA849EC005449F2 /* Assets.xcassets in Resources */,
 				8591B51A1CAB609300CC3A6A /* MineInformationData.plist in Resources */,
+				382001171CB286D400A94436 /* BusinessCell.xib in Resources */,
 				8591B5161CAB609300CC3A6A /* citydata.plist in Resources */,
 				8591B51B1CAB609300CC3A6A /* MoreData.plist in Resources */,
 				8591B5151CAB609300CC3A6A /* city.plist in Resources */,
@@ -646,9 +668,11 @@
 				854FCAB91CACCFBD00220970 /* MainViewController.m in Sources */,
 				854FCAE81CAD1A9700220970 /* CityListViewModel.m in Sources */,
 				85989FB11CAE70D900C2D0AF /* WebViewController.m in Sources */,
+				3815AE631CB2726B0083583F /* DealViewController.m in Sources */,
 				381DEAE91CB11EF100EE2BD3 /* Factory.m in Sources */,
 				850E891A1CA8CCFD0081C3FC /* ViewController.m in Sources */,
 				38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */,
+				382001151CB2863000A94436 /* SearchViewController.m in Sources */,
 				38EC22D31CAB7F750041E2CE /* MineInformationDataModel.m in Sources */,
 				38CAA26E1CA849EC005449F2 /* main.m in Sources */,
 				8591B5231CAB6DBC00CC3A6A /* NSObject+Parse.m in Sources */,

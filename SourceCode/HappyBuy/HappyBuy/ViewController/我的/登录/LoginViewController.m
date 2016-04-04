@@ -46,7 +46,6 @@
         [self.view hideBusyHUD];
         [self.view showWarning:@"登录失败😢"];
     });
-    kAppdelegate.netReachStatus;
 }
 
 - (IBAction)passwordBackClicked:(id)sender {

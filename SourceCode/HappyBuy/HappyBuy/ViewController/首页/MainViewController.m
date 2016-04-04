@@ -134,6 +134,7 @@
     self.category = @"美食";
     self.cityBarItem.title = kCurrentCity;
     self.tableView.tableFooterView = [UIView new];
+    [self.tableView registerNib:[UINib nibWithNibName:@"BusinessCell" bundle:nil] forCellReuseIdentifier:@"BusinessCell"];
     [self.mainVM getMenuData:^(NSError *error) {
         //15 / 8 = 1
         //15 % 8 > 0  = 1(真)

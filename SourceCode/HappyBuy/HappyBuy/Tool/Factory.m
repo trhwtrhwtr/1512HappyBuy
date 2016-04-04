@@ -15,7 +15,7 @@
     [btn setImage:[UIImage imageNamed:@"icon_back"] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:@"icon_back_highlighted"] forState:UIControlStateHighlighted];
     //    [btn setTitle:@"返回" forState:UIControlStateNormal];
-    
+    btn.tintColor = [UIColor whiteColor];
     [btn bk_addEventHandler:^(id sender) {
         [vc.navigationController popViewControllerAnimated:YES];
     } forControlEvents:UIControlEventTouchUpInside];
