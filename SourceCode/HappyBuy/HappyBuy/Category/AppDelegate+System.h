@@ -14,6 +14,6 @@
 
 - (void)setupGlobalConfig;
 
-
-
+- (AFNetworkReachabilityStatus)netReachStatus;
+- (BOOL)isOnLine;
 @end

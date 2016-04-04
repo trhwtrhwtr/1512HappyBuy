@@ -8,9 +8,7 @@
 
 #import "AppDelegate.h"
 //必须引入到.m文件中
-#import "AppDelegate+System.h"
 #import "PlistDataManager.h"
-#import "AppDelegate+Location.h"
 
 @interface AppDelegate ()
 @end
