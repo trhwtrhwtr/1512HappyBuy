@@ -12,7 +12,6 @@
 #import "BusinessViewModel.h"
 #import "WebViewController.h"
 #import "MapViewController.h"
-#import "SortView.h"
 
 #define kItemIconTag   100
 #define kItemLabelTag   200
@@ -174,9 +173,6 @@
             [self.tableView endFooterRefresh];
         }];
     }];
-    
-    SortView *view = [[SortView alloc] initWithFrame:CGRectMake(kScreenW - 100, 20, 88, 200) sorts:@[@"aa", @"bbb"]];
-    [view showInView:self.view];
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
