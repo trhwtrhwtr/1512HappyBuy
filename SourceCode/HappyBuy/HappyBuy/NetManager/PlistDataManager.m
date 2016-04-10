@@ -31,7 +31,7 @@
 
 + (void)getCities:(void (^)(NSArray<CitiesModel *> *, NSError *))completionHandler{
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSArray *tmpArr = [CitiesModel parseJSON:[self getArrFromPlist:@"cities.plist"]];
+        NSArray *tmpArr = [CitiesModel parseJSON:[self getArrFromPlist:@"cities"]];
         dispatch_async(dispatch_get_main_queue(), ^{
             completionHandler(tmpArr, nil);
         });

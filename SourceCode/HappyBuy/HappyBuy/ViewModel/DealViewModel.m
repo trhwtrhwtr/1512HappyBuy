@@ -44,9 +44,9 @@
 }
 
 - (void)getDealWithCategory:(NSString *)category sort:(NSInteger)sort region:(NSString *)region requestMode:(RequestMode)requestMode completionHandler:(void (^)(NSError *))completionHandler{
-    NSInteger tmpPage = 0;
+    NSInteger tmpPage = 1;
     if (requestMode ==  RequestModeMore) {
-        tmpPage = _pageNum ++;
+        tmpPage = ++_pageNum; //++必须在前
     }
     [DPNetManager getDealsWithSort:sort region:region category:category page:tmpPage completionHandler:^(DealModel *model, NSError *error) {
         if (!error) {

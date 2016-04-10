@@ -11,12 +11,15 @@
 #import "DealViewModel.h"
 #import "WebViewController.h"
 #import "SortViewController.h"
+#import "CategoryViewController.h"
+#import "RegionViewController.h"
 
 @interface DealViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cityBarItem;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) DealViewModel *dealVM;
 @property (nonatomic) SortsModel *currentSortModel;
+@property (nonatomic) NSString *currentRegion;
 @end
 
 @implementation DealViewController
@@ -29,15 +32,32 @@
     sortVC.chooseSortHandler = ^(SortsModel *sortModel){
         [sender setTitle:sortModel.label forState:UIControlStateNormal];
         self.currentSortModel = sortModel;
+        [_tableView beginHeaderRefresh];
     };
     [self presentViewController:sortVC animated:YES completion:nil];
 }
 
 
-- (IBAction)regionBtnClicked:(id)sender {
+- (IBAction)regionBtnClicked:(UIButton *)sender {
+    RegionViewController *regionVC = [[RegionViewController alloc] initWithSourceView:sender sourceRect:sender.bounds delegate:nil];
+    regionVC.contentSize = CGSizeMake(250, 260);
+    regionVC.edgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    regionVC.chooseRegionHandler = ^(NSString *region){
+        if ([_currentRegion isEqualToString:region]) {
+            return;
+        }
+        _currentRegion = region;
+        [sender setTitle:_currentRegion forState:UIControlStateNormal];
+        [_tableView beginHeaderRefresh];
+    };
+    [self presentViewController:regionVC animated:YES completion:nil];
 }
 
-- (IBAction)categoryBtnClicked:(id)sender {
+- (IBAction)categoryBtnClicked:(UIButton *)sender {
+    CategoryViewController *categoryVC = [[CategoryViewController alloc] initWithSourceView:sender sourceRect:sender.bounds delegate:nil];
+    categoryVC.contentSize = CGSizeMake(140, 300);
+    categoryVC.edgeInsets = UIEdgeInsetsMake(20, 10, 20, 10);
+    [self presentViewController:categoryVC animated:YES completion:nil];
 }
 
 - (void)cityChanged:(NSNotification *)noti{
@@ -69,17 +89,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _currentRegion = @"全部";
     self.cityBarItem.title = kCurrentCity;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityChanged:) name:kCurrentCityChangedNotification object:nil];
     [self.tableView registerNib:[UINib nibWithNibName:@"BusinessCell" bundle:nil] forCellReuseIdentifier:@"DealCell"];
     [self.tableView addHeaderRefresh:^{
-        [self.dealVM getDealWithCategory:@"美食" sort:self.currentSortModel.value region:@"" requestMode:RequestModeRefresh completionHandler:^(NSError *error) {
+        [self.dealVM getDealWithCategory:@"美食" sort:self.currentSortModel.value region:_currentRegion requestMode:RequestModeRefresh completionHandler:^(NSError *error) {
             [self.tableView reloadData];
             [self.tableView endHeaderRefresh];
         }];
     }];
     [self.tableView addBackFooterRefresh:^{
-        [self.dealVM getDealWithCategory:@"美食" sort:self.currentSortModel.value region:@"" requestMode:RequestModeMore completionHandler:^(NSError *error) {
+        [self.dealVM getDealWithCategory:@"美食" sort:self.currentSortModel.value region:_currentRegion requestMode:RequestModeMore completionHandler:^(NSError *error) {
             [self.tableView reloadData];
             [self.tableView endFooterRefresh];
         }];

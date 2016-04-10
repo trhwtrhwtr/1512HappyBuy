@@ -17,6 +17,8 @@
 		383A01F91CAA6F7000AE668D /* DealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F81CAA6F7000AE668D /* DealModel.m */; };
 		383A01FC1CAA745500AE668D /* SlotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01FB1CAA745500AE668D /* SlotModel.m */; };
 		383A03A21CB12DEE0083BE30 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A03A11CB12DEE0083BE30 /* LoginViewController.m */; };
+		384A70641CBA7A02009B7251 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384A70631CBA7A02009B7251 /* CategoryViewController.m */; };
+		384A70671CBA7BB2009B7251 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384A70661CBA7BB2009B7251 /* RegionViewController.m */; };
 		386EACDE1CBA25B200276AEF /* NSString+YX.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EACDD1CBA25B200276AEF /* NSString+YX.m */; };
 		386EACE21CBA477B00276AEF /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EACE11CBA477B00276AEF /* AlertViewController.m */; };
 		38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086B1CB0CD5F0029918D /* MapViewController.m */; };
@@ -92,6 +94,10 @@
 		383A01FB1CAA745500AE668D /* SlotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlotModel.m; sourceTree = "<group>"; };
 		383A03A01CB12DEE0083BE30 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		383A03A11CB12DEE0083BE30 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		384A70621CBA7A02009B7251 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		384A70631CBA7A02009B7251 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		384A70651CBA7BB2009B7251 /* RegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionViewController.h; sourceTree = "<group>"; };
+		384A70661CBA7BB2009B7251 /* RegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionViewController.m; sourceTree = "<group>"; };
 		386EACDC1CBA25B200276AEF /* NSString+YX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YX.h"; sourceTree = "<group>"; };
 		386EACDD1CBA25B200276AEF /* NSString+YX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YX.m"; sourceTree = "<group>"; };
 		386EACE01CBA477B00276AEF /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
@@ -247,6 +253,10 @@
 				386EACE11CBA477B00276AEF /* AlertViewController.m */,
 				38F9D15E1CBA622600E758B7 /* SortViewController.h */,
 				38F9D15F1CBA622600E758B7 /* SortViewController.m */,
+				384A70651CBA7BB2009B7251 /* RegionViewController.h */,
+				384A70661CBA7BB2009B7251 /* RegionViewController.m */,
+				384A70621CBA7A02009B7251 /* CategoryViewController.h */,
+				384A70631CBA7A02009B7251 /* CategoryViewController.m */,
 			);
 			path = "弹出页面";
 			sourceTree = "<group>";
@@ -678,6 +688,7 @@
 				8591B5201CAB61E300CC3A6A /* CategoriesModel.m in Sources */,
 				381DEAED1CB12C0A00EE2BD3 /* MineViewController.m in Sources */,
 				38EC22C41CAB7C470041E2CE /* CityDataModel.m in Sources */,
+				384A70671CBA7BB2009B7251 /* RegionViewController.m in Sources */,
 				38EC22BE1CAB7B880041E2CE /* CityModel.m in Sources */,
 				38EC22DC1CAB82B60041E2CE /* SortsModel.m in Sources */,
 				38CAA2711CA849EC005449F2 /* AppDelegate.m in Sources */,
@@ -691,6 +702,7 @@
 				85989FAB1CAE526800C2D0AF /* BusinessCell.m in Sources */,
 				854FCAB91CACCFBD00220970 /* MainViewController.m in Sources */,
 				854FCAE81CAD1A9700220970 /* CityListViewModel.m in Sources */,
+				384A70641CBA7A02009B7251 /* CategoryViewController.m in Sources */,
 				85989FB11CAE70D900C2D0AF /* WebViewController.m in Sources */,
 				3815AE631CB2726B0083583F /* DealViewController.m in Sources */,
 				381DEAE91CB11EF100EE2BD3 /* Factory.m in Sources */,
