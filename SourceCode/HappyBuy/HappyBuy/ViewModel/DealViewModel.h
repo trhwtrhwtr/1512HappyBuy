@@ -12,7 +12,7 @@
 @interface DealViewModel : NSObject
 
 /** 根据UI来确定属性和方法 */
-@property (nonatomic) NSInteger rowNumber;
+@property (nonatomic, readonly) NSInteger rowNumber;
 /** 获取商户详情的链接地址 */
 - (NSURL *)businessURLForIndex:(NSInteger)index;
 - (NSURL *)iconURLForIndex:(NSInteger)index;
@@ -26,7 +26,7 @@
 @property (nonatomic, strong) NSMutableArray<DealDealsModel *> *dataList;
 @property (nonatomic, assign) NSInteger pageNum;
 
-- (void)getBusinessWithCategory:(NSString *)category sort:(NSInteger)sort region:(NSString *)region requestMode:(RequestMode)requestMode completionHandler:(void(^)(NSError *error))completionHandler;
+- (void)getDealWithCategory:(NSString *)category sort:(NSInteger)sort region:(NSString *)region requestMode:(RequestMode)requestMode completionHandler:(void(^)(NSError *error))completionHandler;
 
 
 @end

@@ -17,6 +17,7 @@
 		383A01F91CAA6F7000AE668D /* DealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01F81CAA6F7000AE668D /* DealModel.m */; };
 		383A01FC1CAA745500AE668D /* SlotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01FB1CAA745500AE668D /* SlotModel.m */; };
 		383A03A21CB12DEE0083BE30 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A03A11CB12DEE0083BE30 /* LoginViewController.m */; };
+		386EACDE1CBA25B200276AEF /* NSString+YX.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EACDD1CBA25B200276AEF /* NSString+YX.m */; };
 		38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086B1CB0CD5F0029918D /* MapViewController.m */; };
 		38BF086F1CB0E4E90029918D /* MapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086E1CB0E4E90029918D /* MapViewModel.m */; };
 		38BF08721CB0E5DA0029918D /* NSObject+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF08711CB0E5DA0029918D /* NSObject+ViewModel.m */; };
@@ -89,6 +90,8 @@
 		383A01FB1CAA745500AE668D /* SlotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlotModel.m; sourceTree = "<group>"; };
 		383A03A01CB12DEE0083BE30 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		383A03A11CB12DEE0083BE30 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		386EACDC1CBA25B200276AEF /* NSString+YX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YX.h"; sourceTree = "<group>"; };
+		386EACDD1CBA25B200276AEF /* NSString+YX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YX.m"; sourceTree = "<group>"; };
 		38BF086A1CB0CD5F0029918D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = "HappyBuy/ViewController/地图/MapViewController.h"; sourceTree = SOURCE_ROOT; };
 		38BF086B1CB0CD5F0029918D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = "HappyBuy/ViewController/地图/MapViewController.m"; sourceTree = SOURCE_ROOT; };
 		38BF086D1CB0E4E90029918D /* MapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewModel.h; sourceTree = "<group>"; };
@@ -296,6 +299,8 @@
 				8591B5221CAB6DBC00CC3A6A /* NSObject+Parse.m */,
 				85989FA31CAE23F600C2D0AF /* AppDelegate+Location.h */,
 				85989FA41CAE23F600C2D0AF /* AppDelegate+Location.m */,
+				386EACDC1CBA25B200276AEF /* NSString+YX.h */,
+				386EACDD1CBA25B200276AEF /* NSString+YX.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -389,7 +394,6 @@
 				381DEAEA1CB12BFB00EE2BD3 /* 我的 */,
 				854FCAB21CACCF7F00220970 /* 商家 */,
 				854FCAB31CACCF7F00220970 /* 首页 */,
-				854FCAB61CACCF7F00220970 /* 我的 */,
 				850E89171CA8CCFD0081C3FC /* ViewController.h */,
 				850E89181CA8CCFD0081C3FC /* ViewController.m */,
 			);
@@ -452,13 +456,6 @@
 				854FCAE41CAD187A00220970 /* CityListViewController.m */,
 			);
 			path = "城市列表";
-			sourceTree = "<group>";
-		};
-		854FCAB61CACCF7F00220970 /* 我的 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "我的";
 			sourceTree = "<group>";
 		};
 		8591B4FF1CAB603E00CC3A6A /* DPSDK */ = {
@@ -667,6 +664,7 @@
 				8521C38D1CAA22B7009E9F18 /* AppDelegate+System.m in Sources */,
 				38BF086F1CB0E4E90029918D /* MapViewModel.m in Sources */,
 				85989FA51CAE23F600C2D0AF /* AppDelegate+Location.m in Sources */,
+				386EACDE1CBA25B200276AEF /* NSString+YX.m in Sources */,
 				38EC22D91CAB80F30041E2CE /* PortalSettingsModel.m in Sources */,
 				383A03A21CB12DEE0083BE30 /* LoginViewController.m in Sources */,
 				38EC22BB1CAB78650041E2CE /* CitiesModel.m in Sources */,

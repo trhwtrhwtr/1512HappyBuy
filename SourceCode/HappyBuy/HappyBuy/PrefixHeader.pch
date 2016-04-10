@@ -35,6 +35,7 @@
 #import "NSObject+Netwoking.h"
 #import "NSObject+Parse.h"
 #import "NSObject+ViewModel.h"
+#import "NSString+YX.h"
 
 #import <YYKit.h>
 

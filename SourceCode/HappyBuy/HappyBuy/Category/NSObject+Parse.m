@@ -8,21 +8,28 @@
 
 #import "NSObject+Parse.h"
 
+
+
 @implementation NSObject (Parse)
 
-- (NSString *)description {
-    return [self modelDescription];
-}
+kDescriptionMethod
 
 + (id)parseJSON:(id)json{
-    if([json isKindOfClass:[NSDictionary class]]){
-        return [self modelWithJSON:json];
-    }
+    //    if([json isKindOfClass:[NSDictionary class]]){
+    //        return [self modelWithJSON:json];
+    //    }
     if ([json isKindOfClass:[NSArray class]]) {
         return [NSArray modelArrayWithClass:[self class] json:json];
     }
-    return json;
+    return [self modelWithJSON:json];
 }
+
+
+
+
+
+
+
 
 @end
 

@@ -8,10 +8,12 @@
 
 #import "DealViewController.h"
 #import "BusinessCell.h"
+#import "DealViewModel.h"
 
 @interface DealViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cityBarItem;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) DealViewModel *dealVM;
 @end
 
 @implementation DealViewController
@@ -39,6 +41,19 @@
     self.cityBarItem.title = kCurrentCity;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityChanged:) name:kCurrentCityChangedNotification object:nil];
     [self.tableView registerNib:[UINib nibWithNibName:@"BusinessCell" bundle:nil] forCellReuseIdentifier:@"DealCell"];
+    [self.tableView addHeaderRefresh:^{
+        [self.dealVM getDealWithCategory:@"美食" sort:1 region:@"" requestMode:RequestModeRefresh completionHandler:^(NSError *error) {
+            [self.tableView reloadData];
+            [self.tableView endHeaderRefresh];
+        }];
+    }];
+    [self.tableView addBackFooterRefresh:^{
+        [self.dealVM getDealWithCategory:@"美食" sort:1 region:@"" requestMode:RequestModeMore completionHandler:^(NSError *error) {
+            [self.tableView reloadData];
+            [self.tableView endFooterRefresh];
+        }];
+    }];
+    [self.tableView beginHeaderRefresh];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,5 +76,12 @@
  */
 
 #pragma mark - 懒加载
+
+- (DealViewModel *)dealVM {
+    if(_dealVM == nil) {
+        _dealVM = [[DealViewModel alloc] init];
+    }
+    return _dealVM;
+}
 
 @end

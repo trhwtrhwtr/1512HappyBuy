@@ -10,7 +10,9 @@
 
 @implementation UIScrollView (Refresh)
 - (void)addHeaderRefresh:(MJRefreshComponentRefreshingBlock)block{
-    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:block];
+    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        !block ?: block();
+    }];
 }
 - (void)beginHeaderRefresh{
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -24,10 +26,14 @@
 }
 
 - (void)addAutoFooterRefresh:(MJRefreshComponentRefreshingBlock)block{
-    self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:block];
+    self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        !block ?: block();
+    }];
 }
 - (void)addBackFooterRefresh:(MJRefreshComponentRefreshingBlock)block{
-    self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:block];
+    self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        !block ?: block();
+    }];
 }
 - (void)beginFooterRefresh{
     dispatch_async(dispatch_get_main_queue(), ^{

@@ -43,7 +43,7 @@
                          @"region": region};
     NSString *path = [DPRequest serializeURL:@"http://api.dianping.com/v1/deal/find_deals" params:pa];
     return [self GET:path parameters:nil progress:nil completionHandler:^(id responseObj, NSError *error) {
-        completionHandler([BusinessModel parseJSON:responseObj], error);
+        completionHandler([DealModel parseJSON:responseObj], error);
     }];
 }
 
