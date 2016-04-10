@@ -19,6 +19,7 @@
 		383A03A21CB12DEE0083BE30 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A03A11CB12DEE0083BE30 /* LoginViewController.m */; };
 		384A70641CBA7A02009B7251 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384A70631CBA7A02009B7251 /* CategoryViewController.m */; };
 		384A70671CBA7BB2009B7251 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384A70661CBA7BB2009B7251 /* RegionViewController.m */; };
+		384A706B1CBA8892009B7251 /* YXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 384A706A1CBA8892009B7251 /* YXPickerView.m */; };
 		386EACDE1CBA25B200276AEF /* NSString+YX.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EACDD1CBA25B200276AEF /* NSString+YX.m */; };
 		386EACE21CBA477B00276AEF /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EACE11CBA477B00276AEF /* AlertViewController.m */; };
 		38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086B1CB0CD5F0029918D /* MapViewController.m */; };
@@ -98,6 +99,8 @@
 		384A70631CBA7A02009B7251 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		384A70651CBA7BB2009B7251 /* RegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionViewController.h; sourceTree = "<group>"; };
 		384A70661CBA7BB2009B7251 /* RegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionViewController.m; sourceTree = "<group>"; };
+		384A70691CBA8892009B7251 /* YXPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPickerView.h; sourceTree = "<group>"; };
+		384A706A1CBA8892009B7251 /* YXPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPickerView.m; sourceTree = "<group>"; };
 		386EACDC1CBA25B200276AEF /* NSString+YX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YX.h"; sourceTree = "<group>"; };
 		386EACDD1CBA25B200276AEF /* NSString+YX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YX.m"; sourceTree = "<group>"; };
 		386EACE01CBA477B00276AEF /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
@@ -244,6 +247,15 @@
 				383A03A11CB12DEE0083BE30 /* LoginViewController.m */,
 			);
 			path = "登录";
+			sourceTree = "<group>";
+		};
+		384A70681CBA883A009B7251 /* 自定义层级显示控件 */ = {
+			isa = PBXGroup;
+			children = (
+				384A70691CBA8892009B7251 /* YXPickerView.h */,
+				384A706A1CBA8892009B7251 /* YXPickerView.m */,
+			);
+			path = "自定义层级显示控件";
 			sourceTree = "<group>";
 		};
 		386EACDF1CBA476200276AEF /* 弹出页面 */ = {
@@ -408,6 +420,7 @@
 		850E89151CA8CCFD0081C3FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				384A70681CBA883A009B7251 /* 自定义层级显示控件 */,
 				85989FA91CAE526800C2D0AF /* BusinessCell.h */,
 				85989FAA1CAE526800C2D0AF /* BusinessCell.m */,
 				382001161CB286D400A94436 /* BusinessCell.xib */,
@@ -668,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384A706B1CBA8892009B7251 /* YXPickerView.m in Sources */,
 				382001201CB2AA0300A94436 /* DealViewModel.m in Sources */,
 				854FCABC1CACF94000220970 /* MainViewModel.m in Sources */,
 				85989FA81CAE472C00C2D0AF /* DPNetManager.m in Sources */,

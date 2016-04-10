@@ -9,5 +9,5 @@
 #import "AlertViewController.h"
 
 @interface CategoryViewController : AlertViewController
-@property (nonatomic, copy) void(^chooseRegionHandler)(NSString *region);
+@property (nonatomic, copy) void(^chooseCategoryHandler)(NSString *category);
 @end
