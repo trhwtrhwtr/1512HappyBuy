@@ -9,16 +9,36 @@
 #import "DealViewController.h"
 #import "BusinessCell.h"
 #import "DealViewModel.h"
+#import "WebViewController.h"
+#import "SortViewController.h"
 
 @interface DealViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cityBarItem;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) DealViewModel *dealVM;
+@property (nonatomic) SortsModel *currentSortModel;
 @end
 
 @implementation DealViewController
 
 #pragma mark - 方法
+- (IBAction)sortBtnClicked:(UIButton *)sender {
+    SortViewController *sortVC = [[SortViewController alloc] initWithSourceView:sender sourceRect:sender.bounds delegate:nil];
+    sortVC.contentSize = CGSizeMake(100, 200);
+    sortVC.edgeInsets = UIEdgeInsetsMake(20, 10, 20, 10);
+    sortVC.chooseSortHandler = ^(SortsModel *sortModel){
+        [sender setTitle:sortModel.label forState:UIControlStateNormal];
+        self.currentSortModel = sortModel;
+    };
+    [self presentViewController:sortVC animated:YES completion:nil];
+}
+
+
+- (IBAction)regionBtnClicked:(id)sender {
+}
+
+- (IBAction)categoryBtnClicked:(id)sender {
+}
 
 - (void)cityChanged:(NSNotification *)noti{
     self.cityBarItem.title = kCurrentCity;
@@ -26,13 +46,24 @@
 
 #pragma mark - 代理UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.dealVM.rowNumber;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     BusinessCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DealCell" forIndexPath:indexPath];
+    NSInteger row = indexPath.row;
+    cell.titleLb.text = [self.dealVM shopNameForIndex:row];
+    [cell.iconIV setImageURL:[self.dealVM iconURLForIndex:row]];
+    cell.buyNumLb.text = [self.dealVM saleNumForIndex:row];
+    cell.price = [self.dealVM currentPriceForIndex:row];
+    
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    WebViewController *vc = [[WebViewController alloc] initWithURL:[self.dealVM dealURLForIndex:indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark - 生命周期
 - (void)viewDidLoad {
@@ -42,18 +73,19 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityChanged:) name:kCurrentCityChangedNotification object:nil];
     [self.tableView registerNib:[UINib nibWithNibName:@"BusinessCell" bundle:nil] forCellReuseIdentifier:@"DealCell"];
     [self.tableView addHeaderRefresh:^{
-        [self.dealVM getDealWithCategory:@"美食" sort:1 region:@"" requestMode:RequestModeRefresh completionHandler:^(NSError *error) {
+        [self.dealVM getDealWithCategory:@"美食" sort:self.currentSortModel.value region:@"" requestMode:RequestModeRefresh completionHandler:^(NSError *error) {
             [self.tableView reloadData];
             [self.tableView endHeaderRefresh];
         }];
     }];
     [self.tableView addBackFooterRefresh:^{
-        [self.dealVM getDealWithCategory:@"美食" sort:1 region:@"" requestMode:RequestModeMore completionHandler:^(NSError *error) {
+        [self.dealVM getDealWithCategory:@"美食" sort:self.currentSortModel.value region:@"" requestMode:RequestModeMore completionHandler:^(NSError *error) {
             [self.tableView reloadData];
             [self.tableView endFooterRefresh];
         }];
     }];
     [self.tableView beginHeaderRefresh];
+    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,6 +114,16 @@
         _dealVM = [[DealViewModel alloc] init];
     }
     return _dealVM;
+}
+
+
+- (SortsModel *)currentSortModel {
+    if(_currentSortModel == nil) {
+        _currentSortModel = [[SortsModel alloc] init];
+        _currentSortModel.label = @"默认排序";
+        _currentSortModel.value = 1;
+    }
+    return _currentSortModel;
 }
 
 @end

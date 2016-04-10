@@ -18,6 +18,7 @@
 		383A01FC1CAA745500AE668D /* SlotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A01FB1CAA745500AE668D /* SlotModel.m */; };
 		383A03A21CB12DEE0083BE30 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A03A11CB12DEE0083BE30 /* LoginViewController.m */; };
 		386EACDE1CBA25B200276AEF /* NSString+YX.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EACDD1CBA25B200276AEF /* NSString+YX.m */; };
+		386EACE21CBA477B00276AEF /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EACE11CBA477B00276AEF /* AlertViewController.m */; };
 		38BF086C1CB0CD5F0029918D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086B1CB0CD5F0029918D /* MapViewController.m */; };
 		38BF086F1CB0E4E90029918D /* MapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF086E1CB0E4E90029918D /* MapViewModel.m */; };
 		38BF08721CB0E5DA0029918D /* NSObject+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF08711CB0E5DA0029918D /* NSObject+ViewModel.m */; };
@@ -37,6 +38,7 @@
 		38EC22D91CAB80F30041E2CE /* PortalSettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EC22D81CAB80F30041E2CE /* PortalSettingsModel.m */; };
 		38EC22DC1CAB82B60041E2CE /* SortsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EC22DB1CAB82B60041E2CE /* SortsModel.m */; };
 		38EC22DF1CABB9190041E2CE /* PlistDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EC22DE1CABB9190041E2CE /* PlistDataManager.m */; };
+		38F9D1601CBA622600E758B7 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F9D15F1CBA622600E758B7 /* SortViewController.m */; };
 		850A614B1CA9263C00776131 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 850A614A1CA9263C00776131 /* UIScrollView+Refresh.m */; };
 		850E891A1CA8CCFD0081C3FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 850E89181CA8CCFD0081C3FC /* ViewController.m */; };
 		8521C38A1CAA16C7009E9F18 /* NSObject+Netwoking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521C3891CAA16C7009E9F18 /* NSObject+Netwoking.m */; };
@@ -92,6 +94,8 @@
 		383A03A11CB12DEE0083BE30 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		386EACDC1CBA25B200276AEF /* NSString+YX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YX.h"; sourceTree = "<group>"; };
 		386EACDD1CBA25B200276AEF /* NSString+YX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YX.m"; sourceTree = "<group>"; };
+		386EACE01CBA477B00276AEF /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		386EACE11CBA477B00276AEF /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		38BF086A1CB0CD5F0029918D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = "HappyBuy/ViewController/地图/MapViewController.h"; sourceTree = SOURCE_ROOT; };
 		38BF086B1CB0CD5F0029918D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = "HappyBuy/ViewController/地图/MapViewController.m"; sourceTree = SOURCE_ROOT; };
 		38BF086D1CB0E4E90029918D /* MapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewModel.h; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 		38EC22DB1CAB82B60041E2CE /* SortsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortsModel.m; sourceTree = "<group>"; };
 		38EC22DD1CABB9190041E2CE /* PlistDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistDataManager.h; sourceTree = "<group>"; };
 		38EC22DE1CABB9190041E2CE /* PlistDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistDataManager.m; sourceTree = "<group>"; };
+		38F9D15E1CBA622600E758B7 /* SortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
+		38F9D15F1CBA622600E758B7 /* SortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
 		632DF49A4A35F19733539AC3 /* libPods-HappyBuy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HappyBuy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850A61491CA9263C00776131 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
 		850A614A1CA9263C00776131 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
@@ -232,6 +238,17 @@
 				383A03A11CB12DEE0083BE30 /* LoginViewController.m */,
 			);
 			path = "登录";
+			sourceTree = "<group>";
+		};
+		386EACDF1CBA476200276AEF /* 弹出页面 */ = {
+			isa = PBXGroup;
+			children = (
+				386EACE01CBA477B00276AEF /* AlertViewController.h */,
+				386EACE11CBA477B00276AEF /* AlertViewController.m */,
+				38F9D15E1CBA622600E758B7 /* SortViewController.h */,
+				38F9D15F1CBA622600E758B7 /* SortViewController.m */,
+			);
+			path = "弹出页面";
 			sourceTree = "<group>";
 		};
 		38CAA2601CA849EC005449F2 = {
@@ -420,6 +437,7 @@
 		854FCAB21CACCF7F00220970 /* 商家 */ = {
 			isa = PBXGroup;
 			children = (
+				386EACDF1CBA476200276AEF /* 弹出页面 */,
 				382001121CB2862A00A94436 /* 搜索 */,
 				3815AE611CB2726B0083583F /* DealViewController.h */,
 				3815AE621CB2726B0083583F /* DealViewController.m */,
@@ -644,6 +662,7 @@
 				854FCABC1CACF94000220970 /* MainViewModel.m in Sources */,
 				85989FA81CAE472C00C2D0AF /* DPNetManager.m in Sources */,
 				8591B5051CAB603E00CC3A6A /* DPAPI.m in Sources */,
+				38F9D1601CBA622600E758B7 /* SortViewController.m in Sources */,
 				383A01F61CAA69F200AE668D /* BusinessModel.m in Sources */,
 				38EC22DF1CABB9190041E2CE /* PlistDataManager.m in Sources */,
 				383A01FC1CAA745500AE668D /* SlotModel.m in Sources */,
@@ -651,6 +670,7 @@
 				8591B5061CAB603E00CC3A6A /* DPRequest.m in Sources */,
 				854FCAE51CAD187A00220970 /* CityListViewController.m in Sources */,
 				38BF08721CB0E5DA0029918D /* NSObject+ViewModel.m in Sources */,
+				386EACE21CBA477B00276AEF /* AlertViewController.m in Sources */,
 				8521C38A1CAA16C7009E9F18 /* NSObject+Netwoking.m in Sources */,
 				38EC22CA1CAB7E4E0041E2CE /* CityGroupsModel.m in Sources */,
 				85989FAE1CAE588B00C2D0AF /* BusinessViewModel.m in Sources */,

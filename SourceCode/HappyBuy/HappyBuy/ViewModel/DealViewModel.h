@@ -14,7 +14,7 @@
 /** 根据UI来确定属性和方法 */
 @property (nonatomic, readonly) NSInteger rowNumber;
 /** 获取商户详情的链接地址 */
-- (NSURL *)businessURLForIndex:(NSInteger)index;
+- (NSURL *)dealURLForIndex:(NSInteger)index;
 - (NSURL *)iconURLForIndex:(NSInteger)index;
 - (NSString *)shopNameForIndex:(NSInteger)index;
 - (NSString *)discountForIndex:(NSInteger)index;

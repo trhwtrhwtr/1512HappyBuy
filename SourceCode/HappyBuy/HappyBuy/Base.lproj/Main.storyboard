@@ -44,17 +44,26 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3x-Lw-ePr">
                                             <rect key="frame" x="0.0" y="0.0" width="106" height="37"/>
                                             <state key="normal" title="全部分类"/>
+                                            <connections>
+                                                <action selector="categoryBtnClicked:" destination="JYp-jb-IkL" eventType="touchUpInside" id="wPr-Mm-Hm7"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvC-Nf-miL">
                                             <rect key="frame" x="214" y="0.0" width="106" height="37"/>
                                             <state key="normal" title="全部排序"/>
+                                            <connections>
+                                                <action selector="sortBtnClicked:" destination="JYp-jb-IkL" eventType="touchUpInside" id="Hnd-wc-2DM"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgo-rh-U6p">
                                             <rect key="frame" x="107" y="0.0" width="106" height="37"/>
                                             <state key="normal" title="全部区域"/>
+                                            <connections>
+                                                <action selector="regionBtnClicked:" destination="JYp-jb-IkL" eventType="touchUpInside" id="CYq-q4-4tL"/>
+                                            </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="mvC-Nf-miL" secondAttribute="bottom" id="0PJ-bw-PmZ"/>
                                         <constraint firstAttribute="trailing" secondItem="mvC-Nf-miL" secondAttribute="trailing" id="2xq-i4-4gQ"/>

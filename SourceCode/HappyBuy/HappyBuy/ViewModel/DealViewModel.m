@@ -14,7 +14,7 @@
     return self.dataList.count;
 }
 
-- (NSURL *)businessURLForIndex:(NSInteger)index{
+- (NSURL *)dealURLForIndex:(NSInteger)index{
     return self.dataList[index].dealH5URL.yx_URL;
 }
 - (NSURL *)iconURLForIndex:(NSInteger)index;{

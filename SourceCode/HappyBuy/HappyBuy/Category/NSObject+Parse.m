@@ -12,8 +12,6 @@
 
 @implementation NSObject (Parse)
 
-kDescriptionMethod
-
 + (id)parseJSON:(id)json{
     //    if([json isKindOfClass:[NSDictionary class]]){
     //        return [self modelWithJSON:json];
@@ -23,13 +21,6 @@ kDescriptionMethod
     }
     return [self modelWithJSON:json];
 }
-
-
-
-
-
-
-
 
 @end
 
