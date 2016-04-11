@@ -47,8 +47,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YXPickerView : UIView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource, NSCoding>
 
-@property (nonatomic, weak) id<YXPickerViewDelegate> delegate;
-@property (nonatomic, weak) id<YXPickerViewDataSource> dataSource;
+@property (nonatomic, weak, nullable) id<YXPickerViewDelegate> delegate;
+@property (nonatomic, weak, nullable) id<YXPickerViewDataSource> dataSource;
 
 @property(nonatomic,readonly) NSInteger numberOfComponents;
 
