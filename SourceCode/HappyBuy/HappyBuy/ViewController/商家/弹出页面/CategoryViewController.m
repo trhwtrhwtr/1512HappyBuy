@@ -7,31 +7,66 @@
 //
 
 #import "CategoryViewController.h"
+#import "YXPickerView.h"
+#import "PlistDataManager.h"
 
-@interface CategoryViewController ()<UIPickerViewDelegate, UIPickerViewDataSource>
-@property (nonatomic) UIPickerView *pickerView;
+@interface CategoryViewController ()<YXPickerViewDelegate, YXPickerViewDataSource>
+@property (nonatomic) YXPickerView *pickerView;
+@property (nonatomic) NSArray<CategoriesModel *> *categories;
+@property (nonatomic) NSInteger selectedRow;
 @end
 
 @implementation CategoryViewController
 
 #pragma mark - 代理 UIPickerView
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+- (NSInteger)numberOfComponentsInPickerView:(YXPickerView *)pickerView{
     return 2;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return 10;
+- (NSInteger)pickerView:(YXPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    if (component == 0) {
+        return self.categories.count;
+    }
+    return self.categories[component].subcategories.count;
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return @"ddd";
+- (NSString *)pickerView:(YXPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    if (component == 0) {
+        return self.categories[row].name;
+    }
+    return self.categories[self.selectedRow].subcategories[row];
+}
+
+/** 行宽 */
+- (CGFloat)yxPickerView:(YXPickerView *)yxpickerView widthForComponent:(NSInteger)component{
+    return self.view.bounds.size.width/2;
+}
+/** 行高 */
+- (CGFloat)yxPickerView:(YXPickerView *)yxpickerView rowHeightForComponent:(NSInteger)component{
+    return 30;
+}
+
+- (void)pickerView:(YXPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    if (component == 0 ) {
+        self.selectedRow = row;
+        [self.pickerView reloadComponent:1];
+    }
+    if (component == 1) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        !_chooseCategoryHandler ?: _chooseCategoryHandler(self.categories[self.selectedRow].subcategories[row]);
+    }
+    
 }
 
 #pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self pickerView];
+    self.selectedRow = 0;
+    [PlistDataManager getCategories:^(NSArray<CategoriesModel *> *categories, NSError *error) {
+        self.categories = categories;
+        [self.pickerView reloadAllComponents];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,9 +84,9 @@
  }
  */
 #pragma mark - 懒加载
-- (UIPickerView *)pickerView {
+- (YXPickerView *)pickerView {
     if(_pickerView == nil) {
-        _pickerView = [[UIPickerView alloc] init];
+        _pickerView = [[YXPickerView alloc] init];
         [self.view addSubview:_pickerView];
         [_pickerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);

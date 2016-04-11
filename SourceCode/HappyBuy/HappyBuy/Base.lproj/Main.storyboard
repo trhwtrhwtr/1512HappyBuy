@@ -43,7 +43,7 @@
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3x-Lw-ePr">
                                             <rect key="frame" x="0.0" y="0.0" width="106" height="37"/>
-                                            <state key="normal" title="全部分类"/>
+                                            <state key="normal" title="美食"/>
                                             <connections>
                                                 <action selector="categoryBtnClicked:" destination="JYp-jb-IkL" eventType="touchUpInside" id="wPr-Mm-Hm7"/>
                                             </connections>
@@ -127,17 +127,17 @@
         <!--Search View Controller-->
         <scene sceneID="mKY-iO-kIE">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="QvH-hY-3LR" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" hidesBottomBarWhenPushed="YES" id="QvH-hY-3LR" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wNe-Ql-C0F"/>
                         <viewControllerLayoutGuide type="bottom" id="ESj-OB-TAZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LI1-Eh-h8V">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f1n-UI-T8w">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="QvH-hY-3LR" id="z2B-A0-Da9"/>
@@ -177,6 +177,7 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="y2J-zS-76Y" id="z4h-aP-B4T"/>
                         <outlet property="tableView" destination="f1n-UI-T8w" id="655-l6-ZLb"/>
@@ -202,7 +203,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dGE-ga-9m2">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="8eV-iL-nQE" customClass="UIControl">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>

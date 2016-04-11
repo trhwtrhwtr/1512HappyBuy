@@ -42,7 +42,7 @@
         self.popoverPresentationController.delegate = self;
         self.popoverPresentationController.sourceRect = sourceRect;
         self.popoverPresentationController.sourceView = sourceView;
-
+        
         self.delegate = delegate;
     }
     return self;

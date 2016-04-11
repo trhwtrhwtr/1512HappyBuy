@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @protocol YXPickerViewDelegate <NSObject>
+@optional
 /** 行宽 */
 - (CGFloat)yxPickerView:(YXPickerView *)yxpickerView widthForComponent:(NSInteger)component;
 /** 行高 */
@@ -39,13 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString *)pickerView:(YXPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
 - (nullable NSAttributedString *)pickerView:(YXPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component;
 /** 选中某行时 */
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (void)pickerView:(YXPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 /** 自定义视图 */
 - (UIView *)yxPickerView:(YXPickerView *)yxpickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view;
 
 @end
 
-@interface YXPickerView : UIView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource, NSCoding>
+@interface YXPickerView : UIView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NSCoding>
 
 @property (nonatomic, weak, nullable) id<YXPickerViewDelegate> delegate;
 @property (nonatomic, weak, nullable) id<YXPickerViewDataSource> dataSource;

@@ -16,7 +16,7 @@
 /** 归档解档协议 */
 #define kCodingMethod \
 - (void)encodeWithCoder:(NSCoder *)aCoder { [self modelEncodeWithCoder:aCoder]; } \
-- (id)initWithCoder:(NSCoder *)aDecoder { self = [super init]; return [self modelInitWithCoder:aDecoder]; }
+- (id)initWithCoder:(NSCoder *)aDecoder { self = [super initWithCoder:aDecoder]; return [self modelInitWithCoder:aDecoder]; }
 
 /** 判断对象相等方法 */
 #define kEqualObjMethod \
