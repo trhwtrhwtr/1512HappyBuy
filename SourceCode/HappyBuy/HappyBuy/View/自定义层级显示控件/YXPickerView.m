@@ -23,13 +23,6 @@
 
 kCodingMethod
 
-+ (void)initialize
-{
-    if (self == [<#ClassName#> class]) {
-        <#statements#>
-    }
-}
-
 #pragma mark - 懒加载
 - (NSMutableArray<UITableView *> *)tableViews {
     if(_tableViews == nil) {
