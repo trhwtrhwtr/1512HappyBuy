@@ -103,17 +103,6 @@
                                 <segue destination="Tao-dT-6uH" kind="modal" id="hqE-3d-aAh"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Xqr-DI-5fG">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5tc-ah-efq">
-                                <rect key="frame" x="283" y="11" width="21" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="icon_search"/>
-                                <connections>
-                                    <segue destination="QvH-hY-3LR" kind="push" id="HVS-sG-fr0"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cityBarItem" destination="3IK-vs-rmu" id="pTU-LW-eee"/>
@@ -133,10 +122,10 @@
                         <viewControllerLayoutGuide type="bottom" id="ESj-OB-TAZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LI1-Eh-h8V">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f1n-UI-T8w">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f1n-UI-T8w">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -1274,7 +1263,6 @@
         <image name="icon_homepage_hotTopicArrow" width="14" height="24"/>
         <image name="icon_map_location" width="70" height="70"/>
         <image name="icon_map_location_highlighted" width="70" height="70"/>
-        <image name="icon_search" width="30" height="30"/>
         <image name="位置" width="18" height="22"/>
         <image name="头像" width="50" height="50"/>
         <image name="好友" width="16" height="14"/>
